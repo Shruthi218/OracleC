@@ -1,0 +1,34 @@
+a) The number of commits can be found out using the following command:
+
+     git rev-list HEAD --count
+
+    The commits done so far = 6
+
+b) The gitignore file was last modified on August 24th 2015 at 12:19:51.
+    This was found out using the following command:
+
+     git ls-tree -r --name-only HEAD| while read filename; do echo "$(git log -1 --format="%ad" -- $filename) $filename"; done| grep gitignore
+
+c) There weren't any files on 08/21/2015. 
+The initial commit was on 08/23/2015 at 13:05:32.
+
+d) Modifications made
+  src/HardwoodSellerC.cpp | 32 ++++++++++++++++++++++++++++++++
+ src/WoodItem.cpp        | 27 +++++++++++++++++++++++++++
+ src/WoodItem.h          | 31 +++++++++++++++++++++++++++++++
+ 3 files changed, 90 insertions(+)
+
+e) git-log command shows the commits made by the users along with the timestamps.
+ git-status command shows the status of the files of a particular  repository. It helps us to find out the files that are tracked and the one's that are need to be tracked.
+ It also displays  the branch the user is looking at and if the branch is up to date or not.
+
+f) Command to see commits with "main.java" as one of the committed files.
+
+git log --follow main.java
+
+g) Command used to see commits which contain the term "transaction":
+
+git log --all --grep='transaction'
+
+h) git commits between 01/05/2014 to 06/14/2015 by Lauren
+git log --author = "Lauren" --since "OCT 4 2011" --until "OCT 11 2011" --pretty=format:"%H"
