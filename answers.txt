@@ -1,19 +1,20 @@
 a) The number of commits can be found out using the following command:
 
-     git rev-list HEAD --count
+    git rev-list HEAD --count
 
     The commits done so far = 6
 
 b) The gitignore file was last modified on August 24th 2015 at 12:19:51.
-    This was found out using the following command:
+    
+This was found out using the following command:
 
-     git ls-tree -r --name-only HEAD| while read filename; do echo "$(git log -1 --format="%ad" -- $filename) $filename"; done| grep gitignore
+ git ls-tree -r --name-only HEAD| while read filename; do echo "$(git log -1 --format="%ad" -- $filename) $filename"; done| grep gitignore
 
 c) There weren't any files on 08/21/2015. 
 The initial commit was on 08/23/2015 at 13:05:32.
 
-d) Modifications made
-  src/HardwoodSellerC.cpp | 32 ++++++++++++++++++++++++++++++++
+d)The following are the modifications made
+ src/HardwoodSellerC.cpp | 32 ++++++++++++++++++++++++++++++++
  src/WoodItem.cpp        | 27 +++++++++++++++++++++++++++
  src/WoodItem.h          | 31 +++++++++++++++++++++++++++++++
  3 files changed, 90 insertions(+)
