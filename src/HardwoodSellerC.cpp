@@ -158,7 +158,8 @@ vector<double> deliveryTime() {
 	       it = mymap.find(buyers[i].woodtype[j]);
 	       double itemDelivery = 5.5 * (it->second);
 	       itemDeliveryTime.push_back(itemDelivery);
-	    }
+	    } else if (buyers[i].amount[j] > 1000) 
+	          buyers[i].amount[j] = 1000;
 	   }
 	    double time_ = maxTime(itemDeliveryTime);
 	   itemDeliveryTime.clear();
